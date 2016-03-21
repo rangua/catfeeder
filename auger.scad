@@ -34,7 +34,7 @@ module auger() {
         RH=true,
         clearance=0.1,
         backlash=0.1,
-        stepsPerTurn=150
+        stepsPerTurn=30
     );
 }
 
