@@ -2,6 +2,8 @@ use <Thread_Library.scad>
 
 // slice along Y-axis
 
+//projection(cut=true) rotate([0,90,0]) 
+union(){
 auger();
 //auger_import();
 
@@ -16,6 +18,9 @@ tubemount();
 
 *servo();
 */
+}
+
+///////////////////////////////////////////////////////////////////////////
 module auger_import() {
     intersection() {
         translate([-45,-45,0]) cube(96);
@@ -23,10 +28,10 @@ module auger_import() {
     }
 }
 module auger() {
-    cylinder(h=160, r=4, $fn=24);    
+    cylinder(h=125, r=4, $fn=24);    
     trapezoidThread( 
-        length=160,
-        pitch=23,
+        length=125,
+        pitch=26,
         pitchRadius=8,
         threadHeightToPitch=0.70,
         profileRatio=0.20,
